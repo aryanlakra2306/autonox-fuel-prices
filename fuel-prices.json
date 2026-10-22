@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "source": "Petroleum Planning & Analysis Cell (PPAC), Ministry of Petroleum and Natural Gas, Government of India",
+  "sourceURL": "https://ppac.gov.in/uploads/page-images/1792563952_PP_9_a_DailyPriceMSHSD_Metro_21.10.2026.pdf",
+  "unit": "INR per litre",
+  "effectiveDate": "2026-10-21",
+  "fetchedAt": "2026-10-21T17:58:47+00:00",
+  "cities": {
+    "Delhi": {
+      "petrol": 102.12,
+      "diesel": 95.2
+    },
+    "Mumbai": {
+      "petrol": 111.21,
+      "diesel": 97.83
+    },
+    "Chennai": {
+      "petrol": 107.77,
+      "diesel": 99.55
+    },
+    "Kolkata": {
+      "petrol": 113.51,
+      "diesel": 99.82
+    }
+  }
+}

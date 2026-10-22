@@ -1,0 +1,29 @@
+# Runs every morning (07:00 IST), reads PPAC's daily price sheet and commits a fresh fuel-prices.json
+# (fetchedAt changes every day, so there is one small commit a day). The app reads the file from raw.githubusercontent.com.
+name: Update fuel prices
+
+on:
+  schedule:
+    - cron: "30 1 * * *"     # 01:30 UTC = 07:00 IST (prices change at 06:00 IST)
+  workflow_dispatch: {}      # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python fetch_prices.py
+      - name: Commit if prices changed
+        run: |
+          git config user.name "autonox-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add fuel-prices.json
+          git diff --cached --quiet || git commit -m "Fuel prices $(date -u +%F)"
+          git push
