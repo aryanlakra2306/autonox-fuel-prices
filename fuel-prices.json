@@ -1,10 +1,10 @@
 {
   "version": 1,
   "source": "Petroleum Planning & Analysis Cell (PPAC), Ministry of Petroleum and Natural Gas, Government of India",
-  "sourceURL": "https://ppac.gov.in/uploads/page-images/1794207643_PP_9_a_DailyPriceMSHSD_Metro_09.11.2026.pdf",
+  "sourceURL": "https://ppac.gov.in/uploads/page-images/1794288644_PP_9_a_DailyPriceMSHSD_Metro_10.11.2026.pdf",
   "unit": "INR per litre",
-  "effectiveDate": "2026-11-09",
-  "fetchedAt": "2026-11-10T02:20:25+00:00",
+  "effectiveDate": "2026-11-10",
+  "fetchedAt": "2026-11-11T02:17:16+00:00",
   "cities": {
     "Delhi": {
       "petrol": 102.12,
